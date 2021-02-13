@@ -2,11 +2,41 @@
 <html lang="en" dir="ltr">
 
 <head>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.min.js">
+
+  </script>
   <meta charset="utf-8">
   <title>dasol's personal site</title>
+
 </head>
 
-<body>
+<body style="background-color:#bce6eb">
+  <script>
+  var r;
+  var g;
+  var b;
+  var a;
+
+  function setup() {
+  createCanvas(windowWidth, windowHeight);
+  x=0;
+  y=0;
+  }
+
+  function draw() {
+  background(188,230,235);
+  r = random(255); // r is a random number between 0 - 255
+  g = random(255); // g is a random number betwen 100 - 200
+  b = random(255); // b is a random number between 0 - 100
+  a = random(255); // a is a random number between 200 - 255
+
+  fill(r, g, b, a);
+  x= x+10;
+  y= y+5;
+  circle(random(windowWidth),random(windowHeight),random(100))
+  }
+  </script>
+
   <table>
     <td><img src="images/bitcoin.jpg.jpg" alt="hello" width="500" height="600"></td>
     <td>
